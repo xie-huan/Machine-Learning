@@ -14,7 +14,7 @@ class StandardScalar:
         #  [....],
         #  [....]
         # ]
-        self.mean_ = np.array([np.mean(X[:,i]) for i in range(X.shape[1])])
+        self.mean_ = np.array([np.mean(X[:, i]) for i in range(X.shape[1])])
         self.scale_ = np.array([np.std(X[:, i]) for i in range(X.shape[1])])
         return self
 
