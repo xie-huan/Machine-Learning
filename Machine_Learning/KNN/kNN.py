@@ -36,7 +36,6 @@ class KNNClassifier:
         return np.array(y_predict)
 
     def _predict(self, x):
-        # distances 不能是nparray
         distances = [sqrt(np.sum((x_train - x) ** 2)) for x_train in self._X_train]
         topK_y = self._y_train[np.argsort(distances)[:self.k]]
         votes = Counter(topK_y)
